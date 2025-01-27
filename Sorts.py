@@ -11,12 +11,11 @@ def InsertionSort(A):
     for j in range(1, len(A)):
         key = A[j]
         i = j - 1
-
         while i >= 0 and A[i] > key:
             A[i + 1] = A[i]
             i = i - 1
-
         A[i + 1] = key
+        
 def SelectionSort(A):
     for i in range(len(A) - 1):
         min1 = i
@@ -37,7 +36,6 @@ def BubbleSort(A):
 
 def benchmark_sorting_algorithms():
     sizes = [5, 10, 20, 50, 100, 200, 500, 1000, 5000, 10000, 25000]
-    
     insertion_times = []
     selection_times = []
     bubble_times = []
